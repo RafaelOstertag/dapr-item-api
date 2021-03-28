@@ -29,7 +29,7 @@ pipeline {
 
            steps {
                configFileProvider([configFile(fileId: '071964a6-1e15-418b-9a5d-4bd5cbdadeec', variable: 'MAVEN_SETTINGS_XML')]) {
-                   sh label: 'maven package', script: 'mvn -B -s "$MAVEN_SETTINGS_XML" -DskipTests -Pprotoc package'
+                   sh label: 'maven package', script: 'mvn -B -s "$MAVEN_SETTINGS_XML" -DskipTests package'
                }
            }
         }
@@ -46,7 +46,7 @@ pipeline {
 
             steps {
                 configFileProvider([configFile(fileId: '071964a6-1e15-418b-9a5d-4bd5cbdadeec', variable: 'MAVEN_SETTINGS_XML')]) {
-                    sh label: 'maven deploy', script: 'mvn -B -s "$MAVEN_SETTINGS_XML" -DskipTests -Protoc deploy'
+                    sh label: 'maven deploy', script: 'mvn -B -s "$MAVEN_SETTINGS_XML" -DskipTests deploy'
                 }
             }
         }
