@@ -7,6 +7,7 @@
     <groupId>ch.guengel.dapr</groupId>
     <artifactId>dapr-item-api</artifactId>
     <version>1.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
