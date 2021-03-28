@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "ch.guengel.dapr.items.api";
+option java_outer_classname = "ItemProto";
+
+package dapr.items;
+
+service ItemService {
+  rpc ListInventory(Empty) returns (stream ItemDescription) {}
+  rpc EnumerateItems(stream Item) returns (stream ItemDescription) {}
+  rpc TakeItem(Item) returns (Empty) {}
+  rpc PutBackItem(Item) returns (Empty) {}
+}
+
+message Empty{}
+
+message Item {
+  string id = 1;
+  int32 quantity = 2;
+}
+
+message ItemDescription {
+  Item item = 1;
+  string description = 2;
+}
+
