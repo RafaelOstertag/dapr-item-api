@@ -6,7 +6,7 @@
 
     <groupId>ch.guengel.dapr</groupId>
     <artifactId>dapr-item-api</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <properties>
